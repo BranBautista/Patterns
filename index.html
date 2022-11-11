@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ebaa130dd9.js" crossorigin="anonymous"></script>
+    <title>Notes app</title>
+</head>
+
+<body>
+    <div id="popup-box" class="popup-box">
+        <div class="popup">
+            <div class="content">
+                <header>
+                    <p>Edit note</p>
+                    <i id="close-icon" class="fa-solid fa-xmark"></i>
+                </header>
+                <form action="#">
+                    <div class="row-title">
+                        <label>Title</label>
+                        <input id="popup-notetitleinput" class="popup-inputTitle" type="text">
+                    </div>
+                    <div class="row-description">
+                        <label>Description</label>
+                        <textarea id="popup-notebodyarea" cols="30" rows="10"></textarea>
+                    </div>
+                    <button id="update-note">Update note</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper">
+        <section id="inputinfo">
+            <h1>Your notes app</h1>
+            <div id="search">
+                <input type="text" name="searchBar" id="searchBar" class="searchBar" placeholder="Search for a note">
+                <button type="submit" id="btnsearch"><i class="fa fa-search"></i></button>
+            </div>
+            <input type="text" name="title" id="notetitleinput" class="inputTitle" placeholder="Title..."></input>
+            <br>
+            <textarea name="body" id="notebodyarea" cols="30" rows="10" placeholder="Note..."></textarea>
+            <br>
+            <button type="submit " id="btnsubmit">Submit your new note!</button>
+            <div id="undo">
+                <button type="button" id="btnundo"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+            </div>
+        </section>
+
+        <section id="notes">
+            <h2 class="noteswrapper">Notes</h2>
+            <div class="notesContainer" id="notesContainer"></div>
+        </section>
+    </div>
+
+    <template id="template">
+    </template>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

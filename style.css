@@ -1,0 +1,271 @@
+/* Here I want to declare global variables*/
+:root{
+    --mono: "Oxygen mono", monospace;
+    --sans: Oxygen, sans-serif;
+}
+
+body{
+    font-family: var(--sans);
+    margin: 16px;
+    background-color: white;
+}
+
+#inputinfo{
+    text-align: center;
+}
+
+#inputinfo h1{
+    font-size: 3rem;
+    color: grey;
+    font-family: var(--mono);
+}
+
+.inputTitle, .popup-inputTitle{
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 2px solid #ccc;
+    background-color: #f8f8f8;
+}
+
+textarea {
+    width: 80%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+
+#btnsubmit {
+    width: 50%;
+    border: none;
+    border:1px solid orange;
+    background-color: orange;
+    color: white;
+    padding: 16px 32px;
+    margin: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: var(--mono);
+    cursor: pointer;
+}
+
+#btnsubmit:hover {
+    border:1px solid orange;
+    background-color: #f9fdfa;
+    color: black;
+}
+
+.details p{
+    font-weight: normal;
+    font-size: 1.5rem;
+    font-family: var(--mono);
+    color: black;
+    margin: 30px 0px;
+    text-align: left;
+}
+
+.details span{
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+
+.foot a {
+    color: rgb(66, 65, 65);
+    /* We quit the line above the link*/
+    text-decoration: none;
+    /* display: block; */
+    font-family: var(--mono);
+    font-size: 0.8rem;
+    padding: 2%;
+}
+
+.foot a:hover {
+    color:orange;
+}
+
+.foot span{
+    color: rgb(66, 65, 65);
+    font-size: 0.8rem;
+    margin: 2%;
+}
+
+#notesContainer {
+    /*flex in order to acomodate the content in flexbox*/
+    display: flex;
+    /* Everything is on the same high */
+    flex-flow: row wrap;
+    justify-content: space-between;
+    text-align: justify;
+    padding: 64px 16px;
+    /*We need to all the content fill their boxes */
+    align-items: stretch;
+}
+
+.note {
+    flex-basis: 30%;
+    cursor: pointer;
+}
+
+.noteswrapper {
+    flex-basis: 100%;
+    text-align: left;
+    color: grey;
+    font-family: var(--mono);
+    font-size: 2rem;
+}
+
+.details span {
+    white-space: pre;
+    tab-size: 4;
+}
+
+.popup-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4) ;
+}
+
+.popup-box .popup{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    z-index: 3;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 5px;
+    transform: translate(50px, 50px);
+}
+
+.popup-box, .popup-box .popup{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease;
+}
+
+.popup-box.show, .popup-box.show .popup{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.popup .content{
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.popup .content header{
+    padding: 15px 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content header p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.content header i{
+    color: #8b8989;
+    cursor: pointer;
+    font-size: 23px;
+}
+
+.content form{
+    margin: 15px 25px 35px;
+}
+
+.content .form .row{
+    margin-bottom: 20px;
+}
+
+.form .row label{
+    display: block;
+    font-size: 18px;
+    margin-bottom: 6px;
+
+}
+
+.content form :where(input, textarea){
+    width: 100%;
+    height: 50px;
+    font-size: 17px;
+    padding: 0 15px;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid #999
+}
+
+.content form textarea{
+    height: 150px;
+    resize: none;
+    padding: 8px 15px;
+}
+
+.content form button{
+    width: 100%;
+    height: 50px;
+    background: orange;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#btnsearch {
+    width: 38px;
+    height: 32px;
+    border: 1px solid orange;
+    background: orange;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.searchBar {
+    width: 10%;
+    border: 1px solid orange;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: black;
+    background-color: #f8f8f8;
+}
+
+#search {
+    width: 100%;
+    display: flex;
+  }
+
+.btnsearch:hover {
+    border: 1px solid orange;
+    background-color: #f9fdfa;
+    color: black;
+}
+
+#btnundo {
+    width: 38px;
+    height: 32px;
+    border: 1px solid orange;
+    background: orange;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
