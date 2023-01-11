@@ -1,4 +1,3 @@
-/* Here I want to declare global variables*/
 :root{
     --mono: "Oxygen mono", monospace;
     --sans: Oxygen, sans-serif;
@@ -73,9 +72,7 @@ textarea {
 
 .details span{
     line-height: 1.5;
-    font-size: 1.2rem;
 }
-
 
 .foot a {
     color: rgb(66, 65, 65);
@@ -94,7 +91,6 @@ textarea {
 .foot span{
     color: rgb(66, 65, 65);
     font-size: 0.8rem;
-    margin: 2%;
 }
 
 #notesContainer {
