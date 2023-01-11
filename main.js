@@ -284,9 +284,7 @@ submit.addEventListener("click", e => {
                 saveCommand(notes[updateId], updateId);
             }
         }
-
-
-        console.log(notes)
+        
         showNotes(notes);
 
         //We reset the value of the input and textarea
