@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,11 +20,10 @@
                 <form action="#">
                     <div class="row-title">
                         <label>Title</label>
-                        <input id="popup-notetitleinput" class="popup-inputTitle" type="text">
-                    </div>
+                        <input id="popup-notetitleinput" class="popup-inputTitle" type="text">                    </div>
                     <div class="row-description">
                         <label>Description</label>
-                        <textarea id="popup-notebodyarea" cols="30" rows="10"></textarea>
+                        <textarea id="popup-notebodyarea" cols="30" rows="10", type="text"></textarea>
                     </div>
                     <button id="update-note">Update note</button>
                 </form>
@@ -39,16 +37,17 @@
                 <input type="text" name="searchBar" id="searchBar" class="searchBar" placeholder="Search for a note">
                 <button type="submit" id="btnsearch"><i class="fa fa-search"></i></button>
             </div>
+            <form action="">
             <input type="text" name="title" id="notetitleinput" class="inputTitle" placeholder="Title..."></input>
             <br>
             <textarea name="body" id="notebodyarea" cols="30" rows="10" placeholder="Note..."></textarea>
             <br>
             <button type="submit " id="btnsubmit">Submit your new note!</button>
+            </form>
             <div id="undo">
                 <button type="button" id="btnundo"><i class="fa-solid fa-arrow-rotate-left"></i></button>
             </div>
         </section>
-
         <section id="notes">
             <h2 class="noteswrapper">Notes</h2>
             <div class="notesContainer" id="notesContainer"></div>
@@ -58,7 +57,6 @@
     <template id="template">
     </template>
 
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
-
 </html>
